@@ -1,22 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    int N;
-    
-    // Input nilai N
-    printf("Masukkan nilai N: ");
-    scanf("%d", &N);
-    
-    // Proses berdasarkan kondisi N > 50
-    if (N > 50) {
-        N = N + 10;
+    int bilangan;
+
+    // Input bilangan bulat positif
+    printf("Masukkan sebuah bilangan bulat positif: ");
+    scanf("%d", &bilangan);
+
+    // Periksa apakah bilangan adalah positif
+    if (bilangan < 0) {
+        printf("Masukkan bilangan positif!\n");
     } else {
-        N = N - 25;
+        // Cek apakah bilangan ganjil atau genap
+        if (bilangan % 2 == 0) {
+            printf("GENAP\n");
+        } else {
+            printf("GANJIL\n");
+        }
     }
-    
-    // Output hasil akhir N
-    printf("Nilai N: %d\n", N);
-    
+
     return 0;
 }
-
